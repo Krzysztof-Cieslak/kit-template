@@ -1,0 +1,35 @@
+name: Issue Triage
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Triage issue with Copilot
+        uses: github/copilot-agentic-workflow@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          task: |
+            Analyze this newly opened issue and perform triage:
+            
+            1. Review the issue title and description
+            2. Categorize the issue type (bug, feature request, question, documentation)
+            3. Assess priority based on impact and urgency
+            4. Add appropriate labels:
+               - Type labels: bug, enhancement, question, documentation
+               - Priority labels: priority:high, priority:medium, priority:low
+            5. If the issue lacks sufficient information, add the 'needs-info' label
+               and post a comment requesting clarification
+            6. For potential duplicates, search existing issues and link them
+            
+            Issue details:
+            Title: ${{ github.event.issue.title }}
+            Body: ${{ github.event.issue.body }}
+            Author: ${{ github.event.issue.user.login }}
