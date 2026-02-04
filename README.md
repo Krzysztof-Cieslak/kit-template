@@ -7,12 +7,6 @@ Everything you need to build a Svelte project, powered by [`sv`](https://github.
 
 
 
-## ✨ Features
-
-- Lightning fast builds
-- Hot module replacement
-- TypeScript support out of the box
-
 ## Creating a project
 
 If you're seeing this, you've probably already done this step. Congrats!
@@ -37,6 +31,8 @@ npm run dev -- --open
 ```
 
 ## Building
+
+> 💡 **Pro tip:** Run builds in CI/CD for consistent deployments!
 
 To create a production version of your app:
 
