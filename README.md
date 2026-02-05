@@ -1,10 +1,12 @@
-# sv
+# sv 🚀
 
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
+**Last updated:** February 2026
+
 ## Creating a project
 
-If you're seeing this, you've probably already done this step. Congrats!
+Getting started is easy! If you're seeing this, you've probably already done this step. Congrats! 🎉
 
 ```sh
 # create a new project in the current directory
@@ -36,4 +38,7 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+
+---
+Made with ❤️ using Svelte
 
